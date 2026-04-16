@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Atelier - Quantum Physics Lecture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dbd8e4",
+                        "surface-container-highest": "#e4e1ed",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#32323b",
+                        "primary-container": "#6265f5",
+                        "on-primary-fixed": "#ffffff",
+                        "on-surface": "#32323b",
+                        "error": "#a8364b",
+                        "secondary-fixed-dim": "#d4d2eb",
+                        "surface-bright": "#fcf8fe",
+                        "on-primary-container": "#000000",
+                        "error-dim": "#6b0221",
+                        "on-secondary-container": "#505064",
+                        "secondary-fixed": "#e2e0f9",
+                        "on-secondary": "#fbf7ff",
+                        "background": "#fcf8fe",
+                        "surface-container-low": "#f6f2fb",
+                        "surface-container-high": "#eae7f1",
+                        "surface-variant": "#e4e1ed",
+                        "tertiary": "#745479",
+                        "on-secondary-fixed": "#3d3e51",
+                        "primary-fixed": "#6265f5",
+                        "on-error": "#fff7f7",
+                        "primary": "#494adb",
+                        "outline-variant": "#b3b0bc",
+                        "surface-container": "#f0ecf6",
+                        "inverse-on-surface": "#9e9ca2",
+                        "secondary-container": "#e2e0f9",
+                        "surface": "#fcf8fe",
+                        "on-error-container": "#6e0523",
+                        "primary-fixed-dim": "#5557e7",
+                        "surface-tint": "#494adb",
+                        "on-tertiary-fixed-variant": "#6c4d71",
+                        "on-secondary-fixed-variant": "#5a5a6f",
+                        "on-tertiary-container": "#624367",
+                        "primary-dim": "#3c3ccf",
+                        "secondary": "#5d5d72",
+                        "tertiary-dim": "#67486c",
+                        "on-primary": "#fbf7ff",
+                        "secondary-dim": "#515166",
+                        "on-tertiary": "#fff7fb",
+                        "tertiary-fixed-dim": "#eac2ed",
+                        "on-surface-variant": "#5f5e68",
+                        "outline": "#7b7984",
+                        "on-primary-fixed-variant": "#eceaff",
+                        "on-tertiary-fixed": "#4e3154",
+                        "error-container": "#f97386",
+                        "tertiary-fixed": "#f9d0fc",
+                        "inverse-surface": "#0e0e12",
+                        "tertiary-container": "#f9d0fc",
+                        "inverse-primary": "#8083ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .video-gradient-overlay {
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-6 w-[280px] bg-slate-50 dark:bg-slate-900 border-none z-50">
+<div class="mb-10 px-4">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">Digital Atelier</span>
+</div>
+<div class="flex items-center gap-3 px-4 mb-10">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+<img alt="Alex Johnson" data-alt="professional portrait of a young man with a warm smile and creative glasses in an academic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4dmzFp_VUUFk0g22ftv7vePFDU2keYk6vguO-mbs4GEOESgSLmkFFsAcXzYBiX6lcuCwWoF0p0RVw0hFxhslW1yChKR2lR6WfuPat5dFCVH8FLgXzDVsEH-74Sg8xskDS83gfH_W0wFv-X8okG5K9uyoJ6NgxM0FqLepLdmiy2ZNQj_dmUzunOu1A_To3-uEHqc9edyUjvC3GqW4wKLB8sOEHrTganvukYIL6ujqa__mQs4TgwM8QzF1X4rL8TYG5rGgh0TEQHDN8"/>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white leading-none">Alex Johnson</p>
+<p class="text-xs text-slate-500 mt-1">Premium Learner</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Notes -->
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="homepage.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-medium">Home</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium uppercase">Dashboard</span>
+</a><a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="notes.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-medium">Notes</span>
+</a>
+<!-- Videos (Active) -->
+<a class="bg-indigo-100/50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg px-4 py-3 font-semibold transition-transform active:scale-95 flex items-center gap-3" href="video.html">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-medium">Videos</span>
+</a>
+<!-- PYQs -->
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="pyqs.html">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-medium">PYQs</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="reports.html">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-medium">Reports</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 border-t border-slate-200 dark:border-slate-800 pt-6">
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[280px] min-h-screen">
+<!-- TopNavBar (Authority: JSON) -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 bg-white/80 backdrop-blur-xl flex items-center justify-between px-8 z-40 shadow-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search curriculum..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="flex items-center gap-2 group">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 border border-primary-container/20 overflow-hidden">
+<img alt="Alex Johnson" data-alt="close up headshot of Alex Johnson used for account navigation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsimoPi5F3eLMoTx5k3r2ZChqLOfsBlIBWpDM1Y5N3T82Max2OhLJ2ipGrNdWlwAFthxuQzB5BOSQBYQ8pLmbHv4rbeFo9imOEFx-GCZkpWDUbMteVLO4IhBywa9eluzEMW8KpHTjZh-R1-iVCChGhll26oerYqXq3a9Zq3g0BoeUJNO9Y_IOYJKsryGeWKQBjlOHGE_DF7mgcudSJRX0eNFcORTPWH6HcObHJygUf4Nujp01HZBCkDJq3sSicW7Y81rQ0rw6Warxm"/>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="pt-24 pb-12 px-8">
+<div class="flex flex-col xl:flex-row gap-8">
+<!-- Video Player Section -->
+<div class="flex-1 space-y-6">
+<!-- Cinema Style Player -->
+<div class="relative aspect-video bg-slate-950 rounded-xl overflow-hidden shadow-2xl group">
+<img alt="Quantum Physics Lecture" class="w-full h-full object-cover opacity-60" data-alt="abstract visualization of quantum wave functions with glowing blue and purple particles in a dark void space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz-JXgucsh_7Fdf9S4wzY-CZYn5btzGcZIZ_s4oyQXV3qx21TFDaRijUx_EmE3tTSGztt9_kumCelbJkDCpBwhFY5HlwLMhBZxDxZkl9HYdvJwhR3DhZZLhWeVBkyHcTBKqhH2gq-TBLkncFKr1nd3ZXF7hiHVF-pQfV2HRkL5Vyqjj2oSFcPQAo1WkBrlIwCMBdH7mDpASWCGxgHBeBWPLVMWeExCFdWXLr9Lkzd57I-beU-8harzHRoqE6605BfUYpQpcfDFD-tj"/>
+<!-- Video Controls Overlay -->
+<div class="absolute inset-0 flex flex-col justify-end p-6 video-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<!-- Progress Bar -->
+<div class="w-full h-1 bg-white/20 rounded-full mb-4 cursor-pointer relative">
+<div class="absolute left-0 top-0 h-full bg-[#fcd34d] w-1/3 rounded-full"></div>
+<div class="absolute left-1/3 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg"></div>
+</div>
+<div class="flex items-center justify-between text-white">
+<div class="flex items-center gap-6">
+<button class="hover:text-[#fcd34d] transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button class="hover:text-[#fcd34d] transition-colors">
+<span class="material-symbols-outlined" data-icon="skip_next" style="font-variation-settings: 'FILL' 1;">skip_next</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<div class="w-20 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-white w-3/4"></div>
+</div>
+</div>
+<span class="text-xs font-mono">12:45 / 42:10</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:text-[#fcd34d] transition-colors text-xs font-bold px-2 py-1 border border-white/40 rounded">1.25x</button>
+<button class="hover:text-[#fcd34d] transition-colors">
+<span class="material-symbols-outlined" data-icon="closed_caption">closed_caption</span>
+</button>
+<button class="hover:text-[#fcd34d] transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="hover:text-[#fcd34d] transition-colors">
+<span class="material-symbols-outlined" data-icon="fullscreen">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Center Play Button (Large) -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-20 h-20 bg-[#fcd34d] rounded-full flex items-center justify-center shadow-2xl text-slate-900 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-5xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Video Details -->
+<div class="flex items-start justify-between">
+<div>
+<h1 class="text-3xl font-extrabold text-on-background tracking-tight">Quantum Physics - Wave Functions</h1>
+<div class="flex items-center gap-4 mt-2 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm font-medium">October 24, 2023</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+<span class="text-sm font-medium">2,482 views</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-md font-semibold text-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+                                Download
+                            </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary-container text-white rounded-md font-semibold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                                Share
+                            </button>
+</div>
+</div>
+<!-- Tabbed Interaction Section -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border-none ring-1 ring-outline-variant/10">
+<div class="flex border-b border-surface-container-high mb-8">
+<button class="px-6 py-3 text-primary border-b-2 border-primary font-bold text-sm">AI Summary</button>
+<button class="px-6 py-3 text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">Interactive Notes</button>
+<button class="px-6 py-3 text-on-surface-variant hover:text-primary font-medium text-sm transition-colors">Discussion</button>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-[#fcd34d]">
+<div class="flex items-center gap-2 text-tertiary mb-3">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-widest">Key Concept</span>
+</div>
+<p class="text-lg leading-relaxed text-on-background font-medium italic">
+                                    "The Wave Function (Ψ) is a mathematical description of the quantum state of a system, representing the probability amplitude for all possible measurements of a particle."
+                                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-4">
+<h3 class="font-bold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="list_alt">list_alt</span>
+                                        Summary Points
+                                    </h3>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+                                            Historical context: From Bohr to Schrödinger.
+                                        </li>
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+                                            The physical meaning of the squared amplitude |Ψ|².
+                                        </li>
+<li class="flex gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+                                            Normalization conditions for valid wave functions.
+                                        </li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-bold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="lightbulb">lightbulb</span>
+                                        Study Tips
+                                    </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                        Pay close attention to the operator section at 24:15. This forms the basis for your problem set due next Tuesday.
+                                    </p>
+<button class="text-primary text-xs font-bold flex items-center gap-1 hover:underline">
+                                        View suggested practice PYQs
+                                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Playlist / Up Next Sidebar -->
+<aside class="w-full xl:w-96 shrink-0">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden ring-1 ring-outline-variant/10 sticky top-24">
+<div class="p-6 border-b border-surface-container-high flex items-center justify-between">
+<h2 class="font-bold text-on-background">Course Playlist</h2>
+<span class="text-xs font-semibold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">12 Lessons</span>
+</div>
+<div class="p-2 space-y-2 max-h-[720px] overflow-y-auto no-scrollbar">
+<!-- Playlist Item (Active) -->
+<div class="flex gap-4 p-3 rounded-lg bg-primary-container/5 border-l-4 border-primary group">
+<div class="relative w-28 h-16 rounded-md overflow-hidden shrink-0">
+<img alt="Current Lecture" class="w-full h-full object-cover grayscale-[0.5]" data-alt="thumbnail of a physics lecture with math equations on a blackboard and glowing diagrams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1GbMsdGD3Nz-j5zeABDXEEio-GxlO6sn01ttmF848YZrhChK11KLdcjMKL0T25RUN_jDc2GkmqJGZCJqaY7pN-e4kMbjCpxQqzNboRcsg9-Mf1mY2dKk8ziuUfLoSlG2vd0_AhsIwnC2E5WnF-ala-tFjrI_7upizVP9-CV4OBuqbk5YkL34_AAXIsQNIx6DMJSqhvrDbneBbI1N51LGO2G4Cv05WxuP2vPgNrs4opCoyYRxrHTRmaHA29LRPWgNXcN8mStVmmaCe"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="equalizer">equalizer</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-primary mb-1 uppercase tracking-tighter">Current</p>
+<h4 class="text-sm font-bold text-on-background line-clamp-2 leading-tight">04. Quantum Wave Functions</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">42:10 mins</p>
+</div>
+</div>
+<!-- Playlist Item (Upcoming) -->
+<div class="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="relative w-28 h-16 rounded-md overflow-hidden shrink-0">
+<img alt="Next Lecture" class="w-full h-full object-cover" data-alt="digital representation of data and space with glowing blue lines and earth in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClOMTPWtvJjFDVR7ikz-_WuqYq6y2_3K6YWrKiyVne3UxLH3LPnl48W-VsZ2Cybae4hifSeT8ptcU9QxjKFsl79O4E1Wz4AVdWCn4RJPuZXKdXZGwbzoKQT-nkf43bJM_erwPyA86v4R-dv0MyrHOCNi1FT8ujC5So9TMEMvTLfKTVnfzpmnLZGg8-wuFKw3xtv6NDm2ecaCyFCLQH0k0wI6tgndfT6Vdw7Mqoz9KXn5vxnXEPprVw-TmZm4ikFhZtgVaJBsgaz-UP"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="play_arrow">play_arrow</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-tighter">Up Next</p>
+<h4 class="text-sm font-semibold text-on-background line-clamp-2 leading-tight">05. Uncertainty Principle</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">38:15 mins</p>
+</div>
+</div>
+<!-- More Items -->
+<div class="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors group cursor-pointer opacity-80">
+<div class="relative w-28 h-16 rounded-md overflow-hidden shrink-0">
+<img alt="Next Lecture" class="w-full h-full object-cover" data-alt="minimalist classroom with natural lighting and a large monitor showing scientific data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitAR0oWrrcPJF6AsN4uXYdVuHdXlsyBlHPnSf9dc-J8u9oaYadKldCDCKMmBTM9q2Zu-9hDtMFaxqYhbFXv6hj_0N9lmLvBXZshWXjlBP6fu1Dn8NSa7ZlSKCgVcUswaqGw1gXCG8cBYNn1R2_niHVoiLp1r4S3FaaOHtOAX3WiSPLHEw4rTWQyMEB1RN08h-bfvu5Soo-qieQx6YeHvbxkQ9E1poY1gsw-y9NhABk0R-6whAFv3Ew8n5bOXNSMrX7R4Ugn89FYk9"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-tighter">Module 2</p>
+<h4 class="text-sm font-semibold text-on-background line-clamp-2 leading-tight">06. Schrödinger Equation Applications</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">55:00 mins</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors group cursor-pointer opacity-80">
+<div class="relative w-28 h-16 rounded-md overflow-hidden shrink-0">
+<img alt="Next Lecture" class="w-full h-full object-cover" data-alt="microscopic view of atomic particles with bright central light and radiating energy fields" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsroTrtqagzSQFbfIK3jY_9ukwTeDpU8vitgvpkTB-7HnG0dTtWmqBBx69H4sNe_c26HwJXZelmFMYOK6nG6VR6Zi7VneMB_VR_axNoqUdQ--4dOOvP6xdCw2v5J3fRNvLecC1_Ax_9vPVjMWwKjB8ZOflH4Yl6LDyEwuD9ZdwFBC-Ti3f9_g5T3sHrXKrHEbGE-I4gBtGz1cAXBC7BUA9SPqVipyCJNuNw9GIGOK8UGIKa8zIMqewzZzRBdJsK2vMIb16roD-fUVB"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-tighter">Module 2</p>
+<h4 class="text-sm font-semibold text-on-background line-clamp-2 leading-tight">07. Quantum Tunneling Explained</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">45:20 mins</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors group cursor-pointer opacity-80">
+<div class="relative w-28 h-16 rounded-md overflow-hidden shrink-0">
+<img alt="Next Lecture" class="w-full h-full object-cover" data-alt="modern research lab with blue lighting and high-tech equipment for physics experiments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAplRvvMUvURiRK_Cu4DZv6Ah12Wjfj1cZTAB-u_qbfEcvOlUONlou06bJb0y9Uroeq2CTBr7paCVq8BOi2_f9m7EyKv7mOwF_9VDpWnQ0Cg-3tsYeJZJUsSF8RXUKj7g19zaJYOwzpPV8JMkf1sFZzPNMA_BaEA6eAggmVRRFUnq3WjgA-iqinmI3jcNXyTQQXMtCHj_CH5atNn_b5zlPPF2kyV9l8nE60qOsFdrU-nB_RxqOOBWCdNZrZcrnf8Ug4XPJ5SgDogmrL"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-tighter">Module 3</p>
+<h4 class="text-sm font-semibold text-on-background line-clamp-2 leading-tight">08. Entanglement and Bell's Theorem</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">62:15 mins</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low">
+<button class="w-full py-3 bg-[#fcd34d] text-slate-900 rounded-md font-bold text-sm shadow-md hover:brightness-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="auto_awesome">auto_awesome</span>
+                                Generate Course Quiz
+                            </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<script src="chatbot.js"></script>
+</body></html>

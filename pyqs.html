@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=1920, initial-scale=1.0" name="viewport"/>
+<title>Digital Atelier | PYQ Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#3d3e51",
+                        "outline": "#7b7984",
+                        "on-error": "#fff7f7",
+                        "error-container": "#f97386",
+                        "secondary": "#5d5d72",
+                        "tertiary-fixed-dim": "#eac2ed",
+                        "secondary-fixed-dim": "#d4d2eb",
+                        "error": "#a8364b",
+                        "primary-dim": "#3c3ccf",
+                        "tertiary-dim": "#67486c",
+                        "primary-fixed-dim": "#5557e7",
+                        "surface-tint": "#494adb",
+                        "on-background": "#32323b",
+                        "primary-container": "#6265f5",
+                        "surface-variant": "#e4e1ed",
+                        "tertiary-fixed": "#f9d0fc",
+                        "on-tertiary-fixed-variant": "#6c4d71",
+                        "secondary-dim": "#515166",
+                        "on-secondary-container": "#505064",
+                        "on-primary": "#fbf7ff",
+                        "surface-container-high": "#eae7f1",
+                        "inverse-on-surface": "#9e9ca2",
+                        "on-secondary-fixed-variant": "#5a5a6f",
+                        "inverse-surface": "#0e0e12",
+                        "inverse-primary": "#8083ff",
+                        "surface-container-low": "#f6f2fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#4e3154",
+                        "on-error-container": "#6e0523",
+                        "outline-variant": "#b3b0bc",
+                        "on-primary-fixed-variant": "#eceaff",
+                        "surface-bright": "#fcf8fe",
+                        "surface-container": "#f0ecf6",
+                        "on-primary-fixed": "#ffffff",
+                        "on-tertiary-container": "#624367",
+                        "on-surface": "#32323b",
+                        "surface-dim": "#dbd8e4",
+                        "primary-fixed": "#6265f5",
+                        "on-tertiary": "#fff7fb",
+                        "on-surface-variant": "#5f5e68",
+                        "secondary-fixed": "#e2e0f9",
+                        "on-primary-container": "#000000",
+                        "surface-container-highest": "#e4e1ed",
+                        "tertiary": "#745479",
+                        "primary": "#494adb",
+                        "tertiary-container": "#f9d0fc",
+                        "secondary-container": "#e2e0f9",
+                        "on-secondary": "#fbf7ff",
+                        "error-dim": "#6b0221",
+                        "background": "#fcf8fe",
+                        "surface": "#fcf8fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-grain {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBHUWn7C_2RJRXb3n--C-pUF3UmuyhKQTd7ZRVCCqtrVXEXpi9U9Cc_CIpMUOCs9YdNLpVpv2GqVYRKublBQcKa9El2nTl4efHiLWRq6UydaE4TpJOZU9p52ZyZZqW_KnUMCOHbWlkklVTBc-9kaparagKTCxT3iiMbbb8A3Xl0jsrmPLMN932wLRo5FH3QizVQ7QGPmUW7IGqDrOe5e50Kz_cYcpaEfnioasYbLiB2LSl0tgM8NFzBzBpinMMTpfX3PwukbLoE5Rou)
+    }</style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- Sidebar Shell -->
+<aside class="w-[280px] h-screen fixed left-0 top-0 bg-slate-50 dark:bg-slate-900 flex flex-col p-6 gap-2 z-[60] font-manrope text-sm tracking-tight">
+<div class="mb-10 px-4">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Digital Atelier</span>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="homepage.html">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="notes.html">
+<span class="material-symbols-outlined">description</span>
+<span>Notes</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="video.html">
+<span class="material-symbols-outlined">play_circle</span>
+<span>Videos</span>
+</a>
+<!-- Active State: PYQs -->
+<a class="bg-indigo-100/50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg px-4 py-3 font-semibold transition-transform active:scale-95 flex items-center gap-3" href="pyqs.html">
+<span class="material-symbols-outlined">quiz</span>
+<span>PYQs</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="reports.html">
+<span class="material-symbols-outlined">bar_chart</span>
+<span>Reports</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center gap-4 px-2">
+<img alt="Alex Johnson" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up studio portrait of a confident young man with short dark hair and a professional academic look, neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeofenufga_NBwMejcuNxR8iDuaL-922I7xGflNcx9ILpism7R4a7jW8bAMH9HBr80evX1-BfQhHuD73B2wdLRcNCEwgQrZxT_sSH28qUQ4Ti8UJb_477G0paQrgZ2frMPXeMnKQSgDrWug4pZIqCCyAoIzjXSM-6WG7jhT5tIG-IQ3eeHiLzPNMWQL3jPUUjKkn5f1ib_7bNBdv3005oWpaaDMDM9SaymzmQgIuhMPfTP9DzZYKg_j7tAeVAkYL79cX6ZWirrmpQn"/>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Alex Johnson</p>
+<p class="text-slate-500 text-xs uppercase tracking-widest">Premium Student</p>
+</div>
+</div>
+</aside>
+<!-- Top App Bar Shell -->
+<header class="flex items-center justify-between px-8 py-4 ml-[280px] fixed top-0 right-0 left-0 bg-white/80 dark:bg-slate-900/85 backdrop-blur-xl z-50 shadow-soft-ambient">
+<h1 class="text-xl font-black text-slate-900 dark:text-white font-headline">PYQ Central</h1>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-12 pr-4 py-2 bg-surface-container-low border-none rounded-full w-80 text-sm focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-500" placeholder="Search papers, years, or topics..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors">notifications</button>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden xl:block">
+<p class="text-xs font-bold text-slate-900">Current Session</p>
+<p class="text-[10px] text-primary">01:24:00 Rem.</p>
+</div>
+<img alt="Alex Johnson" class="w-8 h-8 rounded-full ring-2 ring-primary/20" data-alt="Young professional male student profile icon with a clean, scholarly look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDtkBlLSAMmqHkxy4TzDZikYDApruq38daisICKmeNb8Hg6MTOlliIMKMgfi7yrtaw2alR7fw73FtFMvqPF4JFS9Rtydsjlbn5TbrfLIaaQ4sBg5-vQwnYLxJ3BNBYBqXUCMAmDa6SKA2oWr3PAG-bAx2BuKSEF4GxNM6zS1xkCyfAS8aiHCyHodBmIK5WDHNdig0Xsd_AZ3aNSxOQ-2T1jFEXpZ_Xf_uOpGCREARsrS_bXwO4Fh9fEyicfSPYw7oS5ZWDK7WM0xrj"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-24 min-h-screen">
+<div class="max-w-[1440px] mx-auto p-10 flex gap-8">
+<!-- Left Column: Primary Content -->
+<div class="flex-1 space-y-10">
+<!-- Editorial Header -->
+<section>
+<p class="text-primary font-bold tracking-[0.2em] text-xs mb-2 uppercase">Focused Practice</p>
+<h2 class="text-5xl font-extrabold text-slate-900 font-headline leading-tight tracking-tight">Previous Year Questions<br/>&amp; MCQs</h2>
+</section>
+<!-- Filter Row -->
+<div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-semibold whitespace-nowrap">All Years</button>
+<button class="px-6 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-full text-sm font-medium border border-outline-variant/20 whitespace-nowrap transition-all">2023</button>
+<button class="px-6 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-full text-sm font-medium border border-outline-variant/20 whitespace-nowrap transition-all">2022</button>
+<button class="px-6 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-full text-sm font-medium border border-outline-variant/20 whitespace-nowrap transition-all">2021</button>
+<button class="px-6 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-full text-sm font-medium border border-outline-variant/20 whitespace-nowrap transition-all">Top Rated</button>
+<button class="px-6 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-full text-sm font-medium border border-outline-variant/20 whitespace-nowrap transition-all">Mock Exams</button>
+</div>
+<!-- Featured MCQ Zone (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative overflow-hidden group bg-gradient-to-br from-primary to-primary-dim p-8 rounded-xl text-white shadow-lg">
+<div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[12rem]">timer</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-2">Daily MCQ Challenge</h3>
+<p class="text-white/80 text-sm mb-6 max-w-xs">Sharp your problem-solving skills with 10 curated questions everyday.</p>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-4 mb-6">
+<div class="flex justify-between text-xs mb-2">
+<span>Streak Progress</span>
+<span>7/10 Done</span>
+</div>
+<div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+<div class="bg-yellow-400 h-full w-[70%]"></div>
+</div>
+</div>
+<button class="bg-white text-primary px-8 py-3 rounded-md font-bold text-sm hover:bg-slate-50 active:scale-95 transition-all">Practice Now</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<div class="flex items-center gap-2 text-tertiary font-bold text-xs uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                Editor's Choice
+                            </div>
+<h3 class="text-2xl font-bold text-slate-900 mb-2">JEE Advanced Masterclass</h3>
+<p class="text-slate-500 text-sm leading-relaxed">High-difficulty physics concepts frequently tested in the last decade. Curated by experts.</p>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="Female student avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4XgIhmGmFslFGeXv3nKCMzxNGBspC4DKAQz-rFVBZz7MCuycujs7PnCFXXMMshoknLPfLRVHQHoRFy2c5222Iv0hri-AKOzPFFFT5ojdVl5HntndCyTCoouLTlprmYoGjI6AmzFifcPVd3IqCWgseSCe5TW6vGpZEuisFLr6paj1IgZeZIa3W53FtjXMdA3bdz8KVbJv5YlKNXI0gVBu9rBG8VLJrondAVIsAyDcAjHcWk4Y1FwAqcTLyHpEt-3MuavBcx4_J4T21"/>
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="Male student avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQUv62ujTFLpER3jMzcjr8K73lpEJ0C5lddr6xYdHaURae6mGmrPvexRgMEjWN_ZOJlqPIBPhlz-5DWnANdXPyxRs373GJmVG5WVhwSlNQqmHcXdErobW54ChUhPhOSxiS3UkiMTAt9KX8tl7e7Tt8GR7DmawPy4mnvgrgGYkrR0LSnbWpdg7npz3Hzaas4rmxVcwsa2mLenLXb28iYS94sp02zZvcQCQFdTRBoVk8CtJ8ODHG7TtMWt153K6xMntrqi8EMyxNKgZf"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold border-2 border-white">+4k</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 group">
+                                Explore Module <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Paper Cards List -->
+<section class="space-y-4">
+<h4 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                        Available Previous Papers
+                    </h4>
+<!-- Paper Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-primary/[0.02] transition-colors border-l-4 border-l-transparent hover:border-l-primary/40">
+<div class="flex gap-6 items-center">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 text-lg">JEE Advanced 2023 - Paper 1</h5>
+<div class="flex gap-4 mt-1 text-slate-500 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">inventory_2</span> 90 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 3 Hours</span>
+<span class="flex items-center gap-1 text-tertiary font-medium">Physics, Chemistry, Maths</span>
+</div>
+</div>
+</div>
+<button class="bg-[#facc15] hover:bg-[#eab308] text-slate-900 px-8 py-3 rounded-md font-extrabold text-sm shadow-sm transition-all active:scale-95 uppercase tracking-wide">
+                            Start Attempt
+                        </button>
+</div>
+<!-- Paper Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-primary/[0.02] transition-colors border-l-4 border-l-transparent hover:border-l-primary/40">
+<div class="flex gap-6 items-center">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 text-lg">BITSAT 2022 Full Mock</h5>
+<div class="flex gap-4 mt-1 text-slate-500 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">inventory_2</span> 130 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 180 Mins</span>
+<span class="flex items-center gap-1 text-tertiary font-medium">PCM + English</span>
+</div>
+</div>
+</div>
+<button class="bg-[#facc15] hover:bg-[#eab308] text-slate-900 px-8 py-3 rounded-md font-extrabold text-sm shadow-sm transition-all active:scale-95 uppercase tracking-wide">
+                            Start Attempt
+                        </button>
+</div>
+<!-- Paper Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-primary/[0.02] transition-colors border-l-4 border-l-transparent hover:border-l-primary/40">
+<div class="flex gap-6 items-center">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 text-lg">NEET 2021 Re-Exam Paper</h5>
+<div class="flex gap-4 mt-1 text-slate-500 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">inventory_2</span> 200 Questions</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 3.5 Hours</span>
+<span class="flex items-center gap-1 text-tertiary font-medium">Biology Focus</span>
+</div>
+</div>
+</div>
+<button class="bg-[#facc15] hover:bg-[#eab308] text-slate-900 px-8 py-3 rounded-md font-extrabold text-sm shadow-sm transition-all active:scale-95 uppercase tracking-wide">
+                            Start Attempt
+                        </button>
+</div>
+</section>
+</div>
+<!-- Right Column: Stats Side Panel -->
+<aside class="w-[360px] space-y-6">
+<!-- Exam Stats Card -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/10 shadow-soft-ambient">
+<h3 class="text-xl font-extrabold text-slate-900 mb-8 font-headline">Exam Stats</h3>
+<div class="space-y-8">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Average Score</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-primary">84%</span>
+<span class="text-green-500 text-xs font-bold flex items-center">
+<span class="material-symbols-outlined text-xs">trending_up</span> +2.4%
+                                </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Attempted</p>
+<p class="text-xl font-bold text-slate-900">1,248</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Accuracy</p>
+<p class="text-xl font-bold text-slate-900">92.4%</p>
+</div>
+</div>
+<!-- Streak Graph Visual Mock -->
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Study Streak (14 Days)</p>
+<div class="flex items-end gap-1.5 h-20">
+<div class="w-full bg-primary/20 h-8 rounded-sm"></div>
+<div class="w-full bg-primary/20 h-10 rounded-sm"></div>
+<div class="w-full bg-primary/20 h-14 rounded-sm"></div>
+<div class="w-full bg-primary h-16 rounded-sm"></div>
+<div class="w-full bg-primary h-12 rounded-sm"></div>
+<div class="w-full bg-primary h-20 rounded-sm"></div>
+<div class="w-full bg-primary/20 h-10 rounded-sm"></div>
+<div class="w-full bg-primary h-14 rounded-sm"></div>
+<div class="w-full bg-primary h-18 rounded-sm"></div>
+<div class="w-full bg-primary h-12 rounded-sm"></div>
+<div class="w-full bg-primary h-16 rounded-sm"></div>
+<div class="w-full bg-primary h-14 rounded-sm"></div>
+<div class="w-full bg-[#facc15] h-20 rounded-sm"></div>
+<div class="w-full bg-[#facc15] h-18 rounded-sm"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-tighter">
+<span>May 01</span>
+<span>Today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activities -->
+<div class="bg-surface-container-low p-8 rounded-2xl">
+<h4 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-widest">Recent Activity</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-2 h-2 rounded-full bg-green-500 mt-1.5"></div>
+<div>
+<p class="text-sm text-slate-700 font-semibold leading-tight">Completed Mock #04</p>
+<p class="text-[11px] text-slate-400 mt-1">2 hours ago • Rank 14</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+<div>
+<p class="text-sm text-slate-700 font-semibold leading-tight">Started Daily MCQ Challenge</p>
+<p class="text-[11px] text-slate-400 mt-1">4 hours ago • In Progress</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-2 h-2 rounded-full bg-slate-300 mt-1.5"></div>
+<div>
+<p class="text-sm text-slate-700 font-semibold leading-tight">Bookmarked physics concept</p>
+<p class="text-[11px] text-slate-400 mt-1">Yesterday</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotion / Tip Card -->
+<div class="bg-slate-900 p-8 rounded-2xl relative overflow-hidden text-white">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-yellow-400 mb-4" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h4 class="text-lg font-bold mb-2 leading-tight">Ready for JEE Adv 2024?</h4>
+<p class="text-white/60 text-xs leading-relaxed mb-6">Our analytics suggest you focus on Electromagnetic Induction this week.</p>
+<a class="text-yellow-400 text-xs font-bold flex items-center gap-1 underline underline-offset-4 decoration-2" href="#">View Deep Insights</a>
+</div>
+<!-- Decorative background icon -->
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-slate-800 text-8xl rotate-12">trending_up</span>
+</div>
+</aside>
+</div>
+</main>
+<script src="chatbot.js"></script>
+</body></html>

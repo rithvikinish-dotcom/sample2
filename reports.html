@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Digital Atelier | Student Reports</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#fcf8fe",
+            surface: "#fcf8fe",
+            "surface-container-low": "#f6f2fb",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#eae7f1",
+            "outline-variant": "#b3b0bc",
+            "on-surface": "#32323b",
+            "on-surface-variant": "#5f5e68",
+            primary: "#494adb",
+            "primary-container": "#6265f5",
+            secondary: "#5d5d72",
+            tertiary: "#745479",
+            "accent-gold": "#c69b35"
+          },
+          fontFamily: {
+            headline: ["Manrope"],
+            body: ["Inter"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: "Inter", sans-serif; }
+    h1, h2, h3, h4, .headline { font-family: "Manrope", sans-serif; }
+    .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+  </style>
+</head>
+<body class="bg-background text-on-surface">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-[280px] h-screen bg-slate-50 dark:bg-slate-900 flex flex-col py-8 px-4 z-50 overflow-y-auto">
+      <div class="mb-10 px-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white">school</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Digital Atelier</h1>
+          <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Academic Excellence</p>
+        </div>
+      </div>
+      <nav class="flex-1 space-y-2">
+        <a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="homepage.html">
+          <span class="material-symbols-outlined">home</span><span class="text-sm">Home</span>
+        </a>
+        <a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="dashboard.html">
+          <span class="material-symbols-outlined">dashboard</span><span class="text-sm">Dashboard</span>
+        </a>
+        <a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="notes.html">
+          <span class="material-symbols-outlined">description</span><span class="text-sm">Notes</span>
+        </a>
+        <a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="video.html">
+          <span class="material-symbols-outlined">play_circle</span><span class="text-sm">Videos</span>
+        </a>
+        <a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="pyqs.html">
+          <span class="material-symbols-outlined">quiz</span><span class="text-sm">PYQs</span>
+        </a>
+        <a class="bg-indigo-100/50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg px-4 py-3 font-semibold transition-transform active:scale-95 flex items-center gap-3" href="reports.html">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">bar_chart</span><span class="text-sm">Reports</span>
+        </a>
+      </nav>
+      <div class="pt-8 border-t border-slate-200 dark:border-slate-800 px-4">
+        <a class="text-slate-500 dark:text-slate-400 py-3 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 flex items-center gap-3" href="#">
+          <span class="material-symbols-outlined">settings</span><span class="text-sm">Settings</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="flex-1 ml-[280px] overflow-y-auto bg-surface">
+      <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-outline-variant/30 px-8 py-4 flex items-center justify-between">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">Student Analytics</p>
+          <h2 class="text-2xl font-extrabold headline">Performance Reports</h2>
+        </div>
+        <button class="bg-[#c69b35] hover:bg-[#b58a2c] text-white px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-bold transition-colors">
+          Export PDF
+        </button>
+      </header>
+
+      <div class="p-8 space-y-8">
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/20">
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Overall Score</p>
+            <p class="text-4xl font-extrabold text-primary mt-2">87%</p>
+            <p class="text-xs text-green-600 mt-2">+4% from last month</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/20">
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Study Hours</p>
+            <p class="text-4xl font-extrabold mt-2">42h</p>
+            <p class="text-xs text-on-surface-variant mt-2">This week</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/20">
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Assignments</p>
+            <p class="text-4xl font-extrabold mt-2">18/20</p>
+            <p class="text-xs text-on-surface-variant mt-2">Submitted on time</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/20">
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Class Rank</p>
+            <p class="text-4xl font-extrabold mt-2">#12</p>
+            <p class="text-xs text-on-surface-variant mt-2">Top 8%</p>
+          </div>
+        </section>
+
+        <section class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-lg font-bold">Subject-wise Progress</h3>
+              <span class="text-xs text-on-surface-variant">Last 30 days</span>
+            </div>
+            <div class="space-y-5">
+              <div>
+                <div class="flex justify-between text-sm mb-2"><span>Physics</span><span class="font-bold">91%</span></div>
+                <div class="h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full w-[91%] bg-primary"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-2"><span>Chemistry</span><span class="font-bold">84%</span></div>
+                <div class="h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full w-[84%] bg-[#745479]"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-2"><span>Mathematics</span><span class="font-bold">79%</span></div>
+                <div class="h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full w-[79%] bg-[#5d5d72]"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20">
+            <h3 class="text-lg font-bold mb-5">Recommendations</h3>
+            <div class="space-y-4 text-sm">
+              <div class="p-4 rounded-xl bg-surface-container-low">
+                <p class="font-semibold">Focus Area</p>
+                <p class="text-on-surface-variant mt-1">Revise Electrostatics and practice 20 PYQs.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low">
+                <p class="font-semibold">Video Suggestion</p>
+                <p class="text-on-surface-variant mt-1">Watch "Integration Tricks - Part 2".</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low">
+                <p class="font-semibold">Next Milestone</p>
+                <p class="text-on-surface-variant mt-1">Reach 90% weekly consistency.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20">
+          <div class="flex items-center justify-between mb-5">
+            <h3 class="text-lg font-bold">Recent Test Reports</h3>
+            <a class="text-primary text-sm font-semibold hover:underline" href="#">View all</a>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low">
+              <div>
+                <p class="font-semibold">Weekly Mock Test #12</p>
+                <p class="text-xs text-on-surface-variant">Physics + Chemistry + Maths</p>
+              </div>
+              <div class="text-right">
+                <p class="font-bold text-primary">88%</p>
+                <p class="text-xs text-on-surface-variant">2 days ago</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low">
+              <div>
+                <p class="font-semibold">PYQ Speed Round</p>
+                <p class="text-xs text-on-surface-variant">Chapter-based quiz set</p>
+              </div>
+              <div class="text-right">
+                <p class="font-bold text-primary">81%</p>
+                <p class="text-xs text-on-surface-variant">4 days ago</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low">
+              <div>
+                <p class="font-semibold">Monthly Benchmark</p>
+                <p class="text-xs text-on-surface-variant">Full syllabus evaluation</p>
+              </div>
+              <div class="text-right">
+                <p class="font-bold text-primary">86%</p>
+                <p class="text-xs text-on-surface-variant">1 week ago</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+<script src="chatbot.js"></script>
+</body>
+</html>
